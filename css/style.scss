@@ -1,0 +1,131 @@
+@import '_media';
+@import 'reset';
+
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css);
+
+$primary_color: #1f9dff;
+$secondary_color: white;
+$third_color: black;
+$four_color:  rgb(243, 246, 249);
+
+@mixin common_btn($padding,$color,$bg) {
+    border-radius: 10px;
+    padding: $padding;
+    color: $color;
+    background-color: $bg;
+    border: none;
+}
+
+header{
+    .iconPart{
+        padding: 2rem 0rem;
+        .left{
+            i{
+                display: none;
+            }
+        }
+        .right{
+            text-align: end;
+            button{
+                font-size: 16px;
+                font-weight: 300;
+                margin-right: 0.5rem;
+                border: 1px solid transparent;
+                @include common_btn(10px 20px, $third_color,$four_color);
+            }
+            .blue{
+                border: 1px solid transparent;
+                transition-duration: .5s;
+                background-color: #1f9dff;
+                color: white;
+                &:hover{
+                    background-color: $secondary_color;
+                    color: $third_color;
+                    border: 1px solid #1f9dff;
+                }
+            }
+            .twoIcons{
+                display: inline-block;
+                button{
+                    margin-right: 0rem;
+                    @include common_btn(9px, $third_color, $four_color);
+                    transform: rotateY(-180deg);
+
+                }
+            }
+        }
+    }
+    .searchSection{
+        padding-bottom: 2rem;
+        position: relative;
+        background-color: #1f9dff;
+        .searchBar{
+            position: absolute;
+            input{
+                border:none;
+                color: $four_color;
+                font-size: 14px;
+                margin-left: 2rem; 
+                outline: none;
+            }
+            i{
+                color: #1f9dff
+            }
+            button{
+                @include common_btn(10px 20px, $secondary_color, $primary_color);
+                margin-left: 44.5rem;
+            }
+            background-color: white;
+            @include common_btn(10px 0rem, $third_color , white )
+        }
+        .bold{
+            font-size: 18px;
+            font-weight: 700;
+            
+        }
+        a{
+            color: $secondary_color;
+            font-weight: 400;
+              font-size: 14px;
+        }
+        ul{
+            display: flex;
+            padding: 0;
+            li{
+                padding-right: 1rem;
+            }
+        }
+    }
+
+}
+main{
+    #first{
+        background-color: rgb(250, 250, 250);
+        padding: 4rem 0rem 7rem;
+        a{
+            font-size: 18px;
+            font-weight: 300;
+            color: $third_color;
+        }
+        .bottom{
+            background-color: $four_color;
+            padding: 2rem 0rem;
+            .c{
+                margin-bottom: 1rem;
+                a{
+                    
+                    font-size: 20px;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+}
+footer{
+    background-color: #12336b;
+    padding: 2rem 0rem;
+    p{
+        color: white;
+        margin: 0;
+    }
+}

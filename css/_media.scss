@@ -1,0 +1,51 @@
+@media(max-width:576px){
+    header{
+        .iconPart{
+            .left{
+                i{
+                    display: inline!important;
+                    font-size: 20px;
+                    padding-right: 2rem;
+                }
+            }
+            .right{
+                .twoIcons{
+                    .moon{
+                        display: inline;
+                    }
+                }
+                button{
+                    display: none;
+                }
+            }
+
+        }
+        .searchSection{
+            
+            .searchBar{
+
+                .left{
+                  input{
+                    padding-right: 18rem;
+                  }
+                    button{
+                       display: none;
+                    }
+                    span{
+                        display: none;
+                    }
+                   
+                }
+            }
+            .frst{
+                ul{
+                justify-content:center;
+                   
+                 }
+            }
+            .scnd{
+                display: none;
+            }
+        }
+    }
+}
